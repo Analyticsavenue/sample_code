@@ -17,4 +17,14 @@ SELECT
     Region
 FROM salesdata;
 select month(Order_date) as month from customerinfo
+
+----Date split for each order_date
+select 
+Order_Date,
+month(Order_Date) as month_orderdate,
+day(Order_Date) as day_orderdate,
+year(Order_Date) as year_orderdate
+from sales_purchase_data_updated
+limit 10
+
  
